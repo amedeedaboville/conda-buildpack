@@ -10,6 +10,8 @@ fi
 
 if [ -f conda-requirements.txt ]; then
     puts-step "Installing dependencies using Conda"
+    puts-step "Installing matplotlib"
+    conda install -u salford_systems matplotlib-nogui
     conda install --file conda-requirements.txt --yes | indent
 fi
 
